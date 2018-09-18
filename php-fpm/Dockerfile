@@ -506,7 +506,7 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     rm /var/log/lastlog /var/log/faillog
 
-RUN usermod -u 1002 www-data
+RUN usermod -u 1000 www-data
 
 WORKDIR /var/www
 
