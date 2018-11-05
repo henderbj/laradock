@@ -101,6 +101,10 @@ services:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
+        - "ffmpeg021:10.21.208.21"
+        - "ffmpeg022:10.21.53.17"
+        - "ffmpeg023:10.20.223.145"
+        - "ffmpeg024:10.20.203.19"
 #      ports:
 #        - "${WORKSPACE_SSH_PORT}:22"
       tty: true
@@ -151,6 +155,10 @@ services:
         - "9000"
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
+        - "ffmpeg021:10.21.208.21"
+        - "ffmpeg022:10.21.53.17"
+        - "ffmpeg023:10.20.223.145"
+        - "ffmpeg024:10.20.203.19"
       environment:
         - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
         - DOCKER_HOST=tcp://docker-in-docker:2375
