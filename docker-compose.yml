@@ -99,6 +99,7 @@ services:
           - BLACKFIRE_CLIENT_TOKEN=${BLACKFIRE_CLIENT_TOKEN}
       volumes:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+        - ${NGINX_SSL_ROOTCA_CERT}:/etc/ssl/ffmpeg_cluster_root_ca.pem
       extra_hosts:
         - "dockerhost:${DOCKER_HOST_IP}"
         - "ffmpeg021:10.21.208.21"
